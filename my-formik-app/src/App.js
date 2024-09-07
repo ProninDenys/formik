@@ -40,28 +40,28 @@ const App = () => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <div style={{ width: '48%' }}>
+            <div className="form-row">
+              <div className="form-field">
                 <label htmlFor="firstName">First Name</label>
                 <Field type="text" name="firstName" />
                 <ErrorMessage name="firstName" component="div" className="error" />
               </div>
 
-              <div style={{ width: '48%' }}>
+              <div className="form-field">
                 <label htmlFor="lastName">Last Name</label>
                 <Field type="text" name="lastName" />
                 <ErrorMessage name="lastName" component="div" className="error" />
               </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <div style={{ width: '48%' }}>
+            <div className="form-row">
+              <div className="form-field">
                 <label htmlFor="birthday">Birthday</label>
                 <Field type="date" name="birthday" />
                 <ErrorMessage name="birthday" component="div" className="error" />
               </div>
 
-              <div style={{ width: '48%' }}>
+              <div className="form-field">
                 <label>Gender</label>
                 <div>
                   <Field type="radio" name="gender" value="Male" /> Male
@@ -71,21 +71,21 @@ const App = () => {
               </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <div style={{ width: '48%' }}>
+            <div className="form-row">
+              <div className="form-field">
                 <label htmlFor="email">Email</label>
                 <Field type="email" name="email" />
                 <ErrorMessage name="email" component="div" className="error" />
               </div>
 
-              <div style={{ width: '48%' }}>
+              <div className="form-field">
                 <label htmlFor="phoneNumber">Phone Number</label>
                 <Field type="text" name="phoneNumber" />
                 <ErrorMessage name="phoneNumber" component="div" className="error" />
               </div>
             </div>
 
-            <div>
+            <div className="form-field">
               <label htmlFor="subject">Subject</label>
               <Field as="select" name="subject">
                 <option value="">Choose option</option>

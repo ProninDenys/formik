@@ -1,6 +1,6 @@
 /* Background gradient */
 body {
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  background: linear-gradient(135deg, #b92714, #841b92);
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   background-color: white;
   border-radius: 15px;
   padding: 40px;
-  width: 400px;
+  width: 600px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -24,35 +24,33 @@ body {
 
 /* Form title */
 h1 {
-  font-weight: 600;
+  font-weight: 300;
   font-size: 24px;
   margin-bottom: 20px;
+  margin-left: -320px;
 }
 
-/* Form fields */
-form div {
-  margin-bottom: 15px;
+/* Form fields container */
+.form-row {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
-label {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
+.form-row .form-field {
+  width: 48%;
 }
 
-/* Input fields and select */
+/* Input fields */
 input,
 select {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
   margin-bottom: 5px;
-  font-family: 'Poppins', sans-serif;
 }
 
 input:focus,
@@ -67,16 +65,17 @@ select:focus {
 
 /* Submit button */
 button {
-  width: 100%;
-  padding: 12px;
+  width: 30%;
+  padding: 15px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  transition: background-color 0.3s;
+  font-size: 17px;
+  font-weight: 800;
+  transition: background-color 0.4s;
+  margin-top: 20px ;
 }
 
 button:hover {
