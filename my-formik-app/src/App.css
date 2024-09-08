@@ -12,7 +12,7 @@ body {
 
 /* Form container */
 .container {
-  background-color: white;
+  background-color: #f5f5f5; 
   border-radius: 15px;
   padding: 40px;
   width: 600px;
@@ -27,7 +27,8 @@ h1 {
   font-weight: 300;
   font-size: 24px;
   margin-bottom: 20px;
-  margin-left: -320px;
+  margin-left: -315px;
+  color: #424242;
 }
 
 /* Form fields container */
@@ -44,13 +45,15 @@ h1 {
 /* Input fields */
 input,
 select {
-  width: 100%;
-  padding: 10px;
-  font-size: 15px;
+  width: 90%;
+  padding: 15px;
+  font-size: 14px;
   border: 1px solid #ddd;
+  background-color: #f0f0f0; 
   border-radius: 5px;
   outline: none;
-  margin-bottom: 5px;
+  margin-bottom: 26px; 
+  color: #424242;
 }
 
 input:focus,
@@ -58,9 +61,49 @@ select:focus {
   border-color: #007bff;
 }
 
-.error {
-  color: red;
-  font-size: 12px;
+/* Subject input: make it wider */
+.form-field.subject {
+  width: 113%; 
+}
+
+/* Calendar input */
+input[type="date"] {
+  font-family: 'Poppins', sans-serif;
+}
+
+.gender-options {
+  display: flex;
+  align-items: center;
+  gap: 45px; 
+  margin-bottom: 35px; 
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; 
+}
+
+.gender-options input[type="radio"] {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #b2aeae;
+  border-radius: 70%;
+  background-color: #b2aeae;
+  cursor: pointer;
+  outline: none;
+  transform: scale(0.4); 
+  margin-bottom: 3px;
+}
+
+.gender-options input[type="radio"]:checked {
+  background-color: #25cb1f; 
+  border-color: #b2aeae; 
+}
+
+.gender-options input[type="radio"]:focus {
+  outline: none;
 }
 
 /* Submit button */
@@ -75,7 +118,7 @@ button {
   font-size: 17px;
   font-weight: 800;
   transition: background-color 0.4s;
-  margin-top: 20px ;
+  margin-top: 20px;
 }
 
 button:hover {
@@ -86,7 +129,11 @@ button:disabled {
   background-color: #cccccc;
 }
 
-/* Radio buttons */
-input[type="radio"] {
-  margin-right: 5px;
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -25px; 
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
 }

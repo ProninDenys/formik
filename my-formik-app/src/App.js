@@ -3,6 +3,7 @@ import './App.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
+// Схема валидации
 const RegistrationSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
   lastName: Yup.string().required('Last name is required'),
@@ -37,6 +38,8 @@ const App = () => {
             setSubmitting(false);
           }, 400);
         }}
+        validateOnChange={false} 
+        validateOnBlur={false} 
       >
         {({ isSubmitting }) => (
           <Form>
@@ -63,9 +66,13 @@ const App = () => {
 
               <div className="form-field">
                 <label>Gender</label>
-                <div>
-                  <Field type="radio" name="gender" value="Male" /> Male
-                  <Field type="radio" name="gender" value="Female" /> Female
+                <div className="gender-options">
+                  <label>
+                    <Field type="radio" name="gender" value="Male" /> Male
+                  </label>
+                  <label>
+                    <Field type="radio" name="gender" value="Female" /> Female
+                  </label>
                 </div>
                 <ErrorMessage name="gender" component="div" className="error" />
               </div>
@@ -85,13 +92,13 @@ const App = () => {
               </div>
             </div>
 
-            <div className="form-field">
+            <div className="form-field subject">
               <label htmlFor="subject">Subject</label>
               <Field as="select" name="subject">
                 <option value="">Choose option</option>
-                <option value="Math">Math</option>
-                <option value="Science">Science</option>
-                <option value="History">History</option>
+                <option value="Math">Subject 1</option>
+                <option value="Science">Subject 2</option>
+                <option value="History">Subject 3</option>
               </Field>
               <ErrorMessage name="subject" component="div" className="error" />
             </div>
